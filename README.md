@@ -1,2 +1,2 @@
-# Font-Awesome
-Yii 3.0 Font Awesome Free
+# Yii3 Assets Font Awesome Free
+Yii3 Assets Font Awesome Free
