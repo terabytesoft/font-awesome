@@ -23,7 +23,9 @@ class NpmSolidAsset extends AssetBundle
 
     public $publishOptions = [
         'only' => [
+            'css/fontawesome.css',
             'css/solid.css',
+            'webfonts/fa-solid*',
         ],
     ];
 }

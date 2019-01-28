@@ -14,7 +14,7 @@ class NpmSolidAsset extends AssetBundle
     public $sourcePath = '@npm/@fortawesome/fontawesome-free/';
 
 	public $css = [
-		'css/solid.min.css',
+        'css/solid.min.css',
     ];
 
     public $depends = [
@@ -23,7 +23,9 @@ class NpmSolidAsset extends AssetBundle
 
     public $publishOptions = [
         'only' => [
+            'css/fontawesome.min.css',
             'css/solid.min.css',
+            'webfonts/fa-solid*',
         ],
     ];
 }

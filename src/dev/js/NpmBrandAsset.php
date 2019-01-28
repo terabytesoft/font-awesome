@@ -24,6 +24,8 @@ class NpmBrandAsset extends AssetBundle
     public $publishOptions = [
         'only' => [
             'js/brands.js',
+            'js/fontawesome.js',
+            'svgs/brands/*',
         ],
     ];
 }

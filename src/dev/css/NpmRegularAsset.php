@@ -23,7 +23,9 @@ class NpmRegularAsset extends AssetBundle
 
     public $publishOptions = [
         'only' => [
+            'css/fontawesome.css',
             'css/regular.css',
+            'webfonts/fa-regular*',
         ],
     ];
 }

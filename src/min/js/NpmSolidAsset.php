@@ -24,6 +24,8 @@ class NpmSolidAsset extends AssetBundle
     public $publishOptions = [
         'only' => [
             'js/solid.min.js',
+            'js/regular.min.js',
+            'svgs/solid/*',
         ],
     ];
 }

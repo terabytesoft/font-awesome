@@ -20,6 +20,8 @@ class NpmAllAsset extends AssetBundle
     public $publishOptions = [
         'only' => [
             'css/all.min.css',
+            'css/fontawesome.min.css',
+            'webfonts/*',
         ],
     ];
 }

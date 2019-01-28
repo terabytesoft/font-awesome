@@ -17,9 +17,15 @@ class NpmAllAsset extends AssetBundle
 		'css/all.css',
     ];
 
+    public $depends = [
+        \assets\fontawesome\dev\css\NpmFontAwesomeAsset::class,
+    ];
+
     public $publishOptions = [
         'only' => [
             'css/all.css',
+            'css/fontawesome.css',
+            'webfonts/*',
         ],
     ];
 }

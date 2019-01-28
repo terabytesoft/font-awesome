@@ -17,9 +17,15 @@ class NpmAllAsset extends AssetBundle
 		'js/all.js',
     ];
 
+    public $depends = [
+        \assets\fontawesome\dev\js\NpmFontAwesomeAsset::class,
+    ];
+
     public $publishOptions = [
         'only' => [
             'js/all.js',
+            'js/fontawesome.js',
+            'svgs/*',
         ],
     ];
 }

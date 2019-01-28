@@ -23,7 +23,9 @@ class NpmSolidAsset extends AssetBundle
 
     public $publishOptions = [
         'only' => [
+            'js/fontawesome.js',
             'js/solid.js',
+            'svgs/solid/*',
         ],
     ];
 }

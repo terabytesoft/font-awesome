@@ -23,7 +23,9 @@ class NpmRegularAsset extends AssetBundle
 
     public $publishOptions = [
         'only' => [
+            'js/fontawesome.js',
             'js/regular.js',
+            'svgs/regular/*',
         ],
     ];
 }

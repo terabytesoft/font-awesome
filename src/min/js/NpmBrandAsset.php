@@ -24,6 +24,8 @@ class NpmBrandAsset extends AssetBundle
     public $publishOptions = [
         'only' => [
             'js/brands.min.js',
+            'js/fontawesome.min.js',
+            'svgs/brands/*',
         ],
     ];
 }

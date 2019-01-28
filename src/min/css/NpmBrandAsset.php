@@ -24,6 +24,8 @@ class NpmBrandAsset extends AssetBundle
     public $publishOptions = [
         'only' => [
             'css/brands.min.css',
+            'css/fontawesome.min.css',
+            'webfonts/fa-brands*',
         ],
     ];
 }
