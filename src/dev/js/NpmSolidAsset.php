@@ -11,13 +11,19 @@ use yii\web\AssetBundle;
  **/
 class NpmSolidAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/@fortawesome/';
+    public $sourcePath = '@npm/@fortawesome/fontawesome-free/';
 
 	public $js = [
-		'fontawesome-free/js/solid.js',
+		'js/solid.js',
     ];
 
     public $depends = [
         \assets\fontawesome\dev\js\NpmFontAwesomeAsset::class,
-	];
+    ];
+
+    public $publishOptions = [
+        'only' => [
+            'js/solid.js',
+        ],
+    ];
 }

@@ -11,13 +11,19 @@ use yii\web\AssetBundle;
  **/
 class NpmRegularAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/@fortawesome/';
+    public $sourcePath = '@npm/@fortawesome/fontawesome-free/';
 
 	public $js = [
-		'fontawesome-free/js/regular.min.js',
+		'js/regular.min.js',
     ];
 
     public $depends = [
         \assets\fontawesome\min\js\NpmFontAwesomeAsset::class,
-	];
+    ];
+
+    public $publishOptions = [
+        'only' => [
+            'js/regular.min.js',
+        ],
+    ];
 }

@@ -11,13 +11,19 @@ use yii\web\AssetBundle;
  **/
 class NpmBrandAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/@fortawesome/';
+    public $sourcePath = '@npm/@fortawesome/fontawesome-free/';
 
 	public $js = [
-		'fontawesome-free/js/brands.js',
+		'js/brands.js',
     ];
 
     public $depends = [
         \assets\fontawesome\dev\js\NpmFontAwesomeAsset::class,
-	];
+    ];
+
+    public $publishOptions = [
+        'only' => [
+            'js/brands.js',
+        ],
+    ];
 }

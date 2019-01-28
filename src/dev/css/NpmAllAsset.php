@@ -11,9 +11,15 @@ use yii\web\AssetBundle;
  **/
 class NpmAllAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/@fortawesome/';
+    public $sourcePath = '@npm/@fortawesome/fontawesome-free/';
 
 	public $css = [
-		'fontawesome-free/css/all.css',
+		'css/all.css',
+    ];
+
+    public $publishOptions = [
+        'only' => [
+            'css/all.css',
+        ],
     ];
 }

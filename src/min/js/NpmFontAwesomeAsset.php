@@ -11,9 +11,15 @@ use yii\web\AssetBundle;
  **/
 class NpmFontAwesomeAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/@fortawesome/';
+    public $sourcePath = '@npm/@fortawesome/fontawesome-free/';
 
 	public $js = [
-		'fontawesome-free/js/fontawesome.min.js',
+		'js/fontawesome.min.js',
+    ];
+
+    public $publishOptions = [
+        'only' => [
+            'js/fontawesome.min.js',
+        ],
     ];
 }
