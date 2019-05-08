@@ -1,6 +1,6 @@
 <?php
 
-namespace assets\fontawesome\min\js;
+namespace TerabyteSoft\Assets\Fontawesome\Min\Js;
 
 use yii\web\AssetBundle;
 

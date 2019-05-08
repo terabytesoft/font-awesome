@@ -1,6 +1,6 @@
 <?php
 
-namespace assets\fontawesome\cdn\css;
+namespace TerabyteSoft\Assets\Fontawesome\Cdn\Css;
 
 use yii\web\AssetBundle;
 

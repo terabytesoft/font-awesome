@@ -1,6 +1,6 @@
 <?php
 
-namespace assets\fontawesome\cdn\js;
+namespace TerabyteSoft\Assets\Fontawesome\Cdn\Js;
 
 use yii\web\AssetBundle;
 
@@ -16,6 +16,6 @@ class CdnSolidAsset extends AssetBundle
     ];
 
     public $depends = [
-        \assets\fontawesome\cdn\CdnFontAwesomeAsset::class,
+        \TerabyteSoft\Assets\Fontawesome\Cdn\Js\CdnFontAwesomeAsset::class,
 	];
 }

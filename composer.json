@@ -24,7 +24,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.1.0",
+        "php": "^7.2",
         "yiisoft/yii-core": "^3.0@dev",
         "yiisoft/yii-web": "^3.0@dev"
     },
@@ -36,10 +36,10 @@
         "hiqdev/composer-config-plugin": "^1.0@dev"
     },
     "autoload": {
-        "psr-4": {"assets\\fontawesome\\": "src"}
+        "psr-4": {"TerabyteSoft\\Assets\\Fontawesome\\": "src"}
     },
     "autoload-dev": {
-        "psr-4": {"assets\\fontawesome\\tests\\": "tests"}
+        "psr-4": {"TerabyteSoft\\Assets\\Fontawesome\\Tests\\": "tests"}
     },
     "extra": {
         "branch-alias": {

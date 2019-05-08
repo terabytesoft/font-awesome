@@ -1,6 +1,6 @@
 <?php
 
-namespace assets\fontawesome\min\css;
+namespace TerabyteSoft\Assets\Fontawesome\Min\Css;
 
 use yii\web\AssetBundle;
 
@@ -18,7 +18,7 @@ class NpmBrandAsset extends AssetBundle
     ];
 
     public $depends = [
-        \assets\fontawesome\min\css\NpmFontAwesomeAsset::class,
+        \TerabyteSoft\Assets\Fontawesome\Min\Css\NpmFontAwesomeAsset::class,
     ];
 
     public $publishOptions = [

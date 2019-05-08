@@ -1,6 +1,6 @@
 <?php
 
-namespace assets\fontawesome\dev\js;
+namespace TerabyteSoft\Assets\Fontawesome\Dev\Js;
 
 use yii\web\AssetBundle;
 
@@ -18,7 +18,7 @@ class NpmSolidAsset extends AssetBundle
     ];
 
     public $depends = [
-        \assets\fontawesome\dev\js\NpmFontAwesomeAsset::class,
+        \TerabyteSoft\Assets\Fontawesome\Dev\Js\NpmFontAwesomeAsset::class,
     ];
 
     public $publishOptions = [
