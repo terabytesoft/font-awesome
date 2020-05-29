@@ -1,31 +1,30 @@
 <?php
 
-namespace TerabyteSoft\Assets\Fontawesome\Dev\Css;
+declare(strict_types=1);
 
-use yii\web\AssetBundle;
+namespace Yii\Extension\Fontawesome\Dev\Css;
 
-/**
- * NpmSolidAsset
- *
- * The asset font awesome free solid css webFont
- **/
-class NpmSolidAsset extends AssetBundle
+use Yiisoft\Assets\AssetBundle;
+
+final class NpmSolidAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/@fortawesome/fontawesome-free/';
+    public ?string $basePath = '@basePath';
+    public ?string $baseUrl = '@web';
+    public ?string $sourcePath = '@npm/@fortawesome/fontawesome-free/';
 
-	public $css = [
-		'css/solid.css',
+    public array $css = [
+        'css/solid.css'
     ];
 
-    public $depends = [
-        \TerabyteSoft\Assets\Fontawesome\Dev\Css\NpmFontAwesomeAsset::class,
+    public array $depends = [
+        NpmFontAwesomeAsset::class
     ];
 
-    public $publishOptions = [
+    public array $publishOptions = [
         'only' => [
             'css/fontawesome.css',
             'css/solid.css',
-            'webfonts/fa-solid*',
+            'webfonts/fa-solid*'
         ],
     ];
 }

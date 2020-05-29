@@ -1,31 +1,30 @@
 <?php
 
-namespace TerabyteSoft\Assets\Fontawesome\Dev\Js;
+declare(strict_types=1);
 
-use yii\web\AssetBundle;
+namespace Yii\Extension\Fontawesome\Dev\Js;
 
-/**
- * NpmBrandAsset
- *
- * The asset font awesome free brands css svg
- **/
-class NpmBrandAsset extends AssetBundle
+use Yiisoft\Assets\AssetBundle;
+
+final class NpmBrandAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/@fortawesome/fontawesome-free/';
+    public ?string $basePath = '@basePath';
+    public ?string $baseUrl = '@web';
+    public ?string $sourcePath = '@npm/@fortawesome/fontawesome-free/';
 
-	public $js = [
-		'js/brands.js',
+    public array $js = [
+        'js/brands.js'
     ];
 
-    public $depends = [
-        \TerabyteSoft\Assets\Fontawesome\Dev\Js\NpmFontAwesomeAsset::class,
+    public array $depends = [
+        NpmFontAwesomeAsset::class
     ];
 
-    public $publishOptions = [
+    public array $publishOptions = [
         'only' => [
             'js/brands.js',
             'js/fontawesome.js',
-            'svgs/brands/*',
+            'svgs/brands/*'
         ],
     ];
 }

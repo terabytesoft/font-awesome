@@ -1,21 +1,20 @@
 <?php
 
-namespace TerabyteSoft\Assets\Fontawesome\Cdn\Js;
+declare(strict_types=1);
 
-use yii\web\AssetBundle;
+namespace Yii\Extension\Fontawesome\Cdn\Js;
 
-/**
- * CdnBrandAsset
- *
- * The asset font awesome free brands css svg
- **/
-class CdnBrandAsset extends AssetBundle
+use Yiisoft\Assets\AssetBundle;
+
+final class CdnBrandAsset extends AssetBundle
 {
-	public $js = [
-		'https://use.fontawesome.com/releases/v5.6.3/js/brands.js',
+    public bool $cdn = true;
+
+    public array $js = [
+        'https://use.fontawesome.com/releases/v5.13.0/js/brands.js'
     ];
 
-    public $depends = [
-        \TerabyteSoft\Assets\Fontawesome\Cdn\Js\CdnFontAwesomeAsset::class,
-	];
+    public array $depends = [
+        CdnFontAwesomeAsset::class
+    ];
 }

@@ -1,17 +1,16 @@
 <?php
 
-namespace TerabyteSoft\Assets\Fontawesome\Cdn\Js;
+declare(strict_types=1);
 
-use yii\web\AssetBundle;
+namespace Yii\Extension\Fontawesome\Cdn\Js;
 
-/**
- * CdnAllAsset
- *
- * The asset font awesome free all css svg
- **/
-class CdnAllAsset extends AssetBundle
+use Yiisoft\Assets\AssetBundle;
+
+final class CdnAllAsset extends AssetBundle
 {
-	public $js = [
-		'https://use.fontawesome.com/releases/v5.6.3/js/all.js',
+    public bool $cdn = true;
+
+    public array $js = [
+        'https://use.fontawesome.com/releases/v5.13.0/js/all.js'
     ];
 }

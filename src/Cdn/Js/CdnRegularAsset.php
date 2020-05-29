@@ -1,21 +1,20 @@
 <?php
 
-namespace TerabyteSoft\Assets\Fontawesome\Cdn\Js;
+declare(strict_types=1);
 
-use yii\web\AssetBundle;
+namespace Yii\Extension\Fontawesome\Cdn\Js;
 
-/**
- * CdnRegularAsset
- *
- * The asset font awesome free regular css svg
- **/
-class CdnRegularAsset extends AssetBundle
+use Yiisoft\Assets\AssetBundle;
+
+final class CdnRegularAsset extends AssetBundle
 {
-	public $js = [
-		'https://use.fontawesome.com/releases/v5.6.3/js/regular.js',
+    public bool $cdn = true;
+
+    public array $js = [
+        'https://use.fontawesome.com/releases/v5.13.0/js/regular.js'
     ];
 
-    public $depends = [
-        \TerabyteSoft\Assets\Fontawesome\Cdn\Js\CdnFontAwesomeAsset::class,
-	];
+    public array $depends = [
+        CdnFontAwesomeAsset::class
+    ];
 }

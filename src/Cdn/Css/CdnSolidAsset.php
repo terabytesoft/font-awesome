@@ -1,21 +1,20 @@
 <?php
 
-namespace TerabyteSoft\Assets\Fontawesome\Cdn\Css;
+declare(strict_types=1);
 
-use yii\web\AssetBundle;
+namespace Yii\Extension\Fontawesome\Cdn\Css;
 
-/**
- * CdnSolidAsset
- *
- * The asset font awesome free solid css webFont
- **/
-class CdnSolidAsset extends AssetBundle
+use Yiisoft\Assets\AssetBundle;
+
+final class CdnSolidAsset extends AssetBundle
 {
-	public $css = [
-		'https://use.fontawesome.com/releases/v5.6.3/css/solid.css',
+    public bool $cdn = true;
+
+    public array $css = [
+        'https://use.fontawesome.com/releases/v5.13.0/css/solid.css'
     ];
 
-    public $depends = [
-        \TerabyteSoft\Assets\Fontawesome\Cdn\Css\CdnFontAwesomeAsset::class,
-	];
+    public array $depends = [
+        CdnFontAwesomeAsset::class
+    ];
 }

@@ -1,49 +1,43 @@
 {
-    "name": "terabytesoft/font-awesome",
+    "name": "yii-extension/fontawesome",
     "type": "library",
-    "description": "Yii3 Assets Font Awesome Free",
+    "description": "Assets Font Awesome Free",
     "keywords": [
         "yii3",
         "assets",
         "font awesome",
         "free"
     ],
-    "homepage": "https://github.com/terabytesoft/font-awesome",
-    "license": "BSD-3-Clause",
-    "support": {
-        "issues": "https://github.com/terabytesoft/font-awesome/issues",
-        "source": "https://github.com/terabytesoft/font-awesome",
-        "forum":  "https://discuss.cjtterabyte.com"
-    },
-    "authors": [
-        {
-            "name": "Wilmer Arambula",
-            "email": "terabytesoftw@gmail.com"
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^7.2",
-        "yiisoft/yii-core": "^3.0@dev",
-        "yiisoft/yii-web": "^3.0@dev"
+        "php": ">=7.4",
+        "yiisoft/assets": "@dev"
     },
     "require-dev": {
-        "yiisoft/di": "^3.0@dev",
-        "yiisoft/log": "^3.0@dev",
-        "yiisoft/cache": "^3.0@dev",
-        "foxy/foxy": "^1.0",
-        "hiqdev/composer-config-plugin": "^1.0@dev"
+        "psr/log": "^1.1",
+        "foxy/foxy": "@dev",
+        "phpunit/phpunit": "^9.0",
+        "yiisoft/aliases": "@dev",
+        "yiisoft/composer-config-plugin": "^1.0@dev",
+        "yiisoft/di": "@dev",
+        "yiisoft/files": "@dev"
     },
     "autoload": {
-        "psr-4": {"TerabyteSoft\\Assets\\Fontawesome\\": "src"}
+        "psr-4": {"Yii\\Extension\\Fontawesome\\": "src"}
     },
     "autoload-dev": {
-        "psr-4": {"TerabyteSoft\\Assets\\Fontawesome\\Tests\\": "tests"}
+        "psr-4": {"Yii\\Extension\\Fontawesome\\Tests\\": "tests"}
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.0.1-dev"
+            "dev-master": "1.0.0-dev"
+        },
+        "config-plugin": {
+            "tests": "config/test.php"
         }
+    },
+    "config": {
+        "sort-packages": true
     }
 }

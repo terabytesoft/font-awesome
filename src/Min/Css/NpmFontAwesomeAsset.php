@@ -1,25 +1,24 @@
 <?php
 
-namespace TerabyteSoft\Assets\Fontawesome\Min\Css;
+declare(strict_types=1);
 
-use yii\web\AssetBundle;
+namespace Yii\Extension\Fontawesome\Min\Css;
 
-/**
- * NpmFontAwesomeAsset
- *
- * The asset font awesome free css webFont minified
- **/
-class NpmFontAwesomeAsset extends AssetBundle
+use Yiisoft\Assets\AssetBundle;
+
+final class NpmFontAwesomeAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/@fortawesome/fontawesome-free/';
+    public ?string $basePath = '@basePath';
+    public ?string $baseUrl = '@web';
+    public ?string $sourcePath = '@npm/@fortawesome/fontawesome-free/';
 
-	public $css = [
-		'css/fontawesome.min.css',
+    public array $css = [
+        'css/fontawesome.min.css'
     ];
 
-    public $publishOptions = [
+    public array $publishOptions = [
         'only' => [
-            'css/fontawesome.min.css',
+            'css/fontawesome.min.css'
         ],
     ];
 }
