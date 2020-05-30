@@ -20,7 +20,7 @@ final class NpmAllAsset extends AssetBundle
         NpmFontAwesomeAsset::class
     ];
 
-    public $publishOptions = [
+    public array $publishOptions = [
         'only' => [
             'css/all.css',
             'css/fontawesome.css',
