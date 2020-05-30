@@ -12,7 +12,6 @@
 [![Latest Stable Version](https://poser.pugx.org/yii-extension/fontawesome/v/stable.png)](https://packagist.org/packages/yii-extension/fontawesome)
 [![Total Downloads](https://poser.pugx.org/yii-extension/fontawesome/downloads.png)](https://packagist.org/packages/yii-extension/fontawesome)
 [![build](https://github.com/yii-extension/fontawesome/workflows/build/badge.svg)](https://github.com/yii-extension/fontawesome/actions)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yii-extension/fontawesome/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yii-extension/fontawesome/?branch=master)
 
 
 ### Requirements:
@@ -25,7 +24,7 @@ The minimum requirement by this project template that your Web server supports P
 The package could be installed via composer:
 
 ```php
-composer require yiisoft/form
+composer require yii-extension/fontawesome
 ```
 
 ### How to use:
