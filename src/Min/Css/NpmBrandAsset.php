@@ -8,7 +8,7 @@ use Yiisoft\Assets\AssetBundle;
 
 final class NpmBrandAsset extends AssetBundle
 {
-    public ?string $basePath = '@basePath';
+    public ?string $basePath = '@assets';
     public ?string $baseUrl = '@assetsUrl';
     public ?string $sourcePath = '@npm/@fortawesome/fontawesome-free/';
 

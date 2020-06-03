@@ -87,7 +87,7 @@ final class CdnAssetTest extends TestCase
             $this->assertEquals($bundle->js[0], $this->assetManager->getJsFiles()[$bundle->js[0]]['url']);
         }
 
-        $this->removeAssets('@basePath');
+        $this->removeAssets('@assets');
     }
 
     /**

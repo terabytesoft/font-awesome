@@ -131,6 +131,6 @@ final class NpmAssetTest extends TestCase
             $this->assertEquals($bundleUrl, $this->assetManager->getJsFiles()[$bundleUrl]['url']);
         }
 
-        $this->removeAssets('@basePath');
+        $this->removeAssets('@assets');
     }
 }
