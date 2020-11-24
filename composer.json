@@ -11,15 +11,17 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.4",
+        "php": "^7.4|^8.0",
+        "npm-asset/fortawesome--fontawesome-free": "^5.15.1",
+        "oomphinc/composer-installers-extender": "^2.0.0",
         "yiisoft/assets": "@dev"
     },
     "require-dev": {
         "psr/log": "^1.1",
-        "foxy/foxy": "@dev",
-        "phpunit/phpunit": "^9.0",
-        "yiisoft/aliases": "@dev",
-        "yiisoft/composer-config-plugin": "^1.0@dev",
+        "phpunit/phpunit": "^9.4",
+        "roave/infection-static-analysis-plugin": "^1.5",
+        "vimeo/psalm": "^4.2",
+        "yiisoft/aliases": "^1.1",
         "yiisoft/di": "@dev",
         "yiisoft/files": "@dev"
     },
@@ -33,11 +35,22 @@
         "branch-alias": {
             "dev-master": "1.0.0-dev"
         },
-        "config-plugin": {
-            "tests": "config/test.php"
+        "installer-types": [
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "./node_modules/{$name}": [
+                "type:npm-asset"
+            ]
         }
     },
     "config": {
         "sort-packages": true
-    }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
 }

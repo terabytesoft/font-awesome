@@ -10,7 +10,7 @@ final class NpmAllAsset extends AssetBundle
 {
     public ?string $basePath = '@assets';
     public ?string $baseUrl = '@assetsUrl';
-    public ?string $sourcePath = '@npm/@fortawesome/fontawesome-free/';
+    public ?string $sourcePath = '@npm/fortawesome--fontawesome-free';
 
     public array $css = [
         'css/all.css'
