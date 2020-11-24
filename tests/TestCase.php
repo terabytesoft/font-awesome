@@ -34,6 +34,13 @@ abstract class TestCase extends BaseTestCase
         $this->aliases = $this->container->get(Aliases::class);
     }
 
+    protected function tearDown(): void
+    {
+        parent::tearDown();
+
+        $this->removeAssets('@assets');
+    }
+
     protected function removeAssets(string $basePath): void
     {
         $handle = opendir($dir = $this->aliases->get($basePath));

@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
+    <a href="https://github.com/yii-extension" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/993323" height="80px">
     </a>
     <a href="https://fontawesome.com/start" target="_blank" rel="external">
@@ -12,12 +12,7 @@
 [![Latest Stable Version](https://poser.pugx.org/yii-extension/fontawesome/v/stable.png)](https://packagist.org/packages/yii-extension/fontawesome)
 [![Total Downloads](https://poser.pugx.org/yii-extension/fontawesome/downloads.png)](https://packagist.org/packages/yii-extension/fontawesome)
 [![build](https://github.com/yii-extension/fontawesome/workflows/build/badge.svg)](https://github.com/yii-extension/fontawesome/actions)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yiisoft/fontawesome/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yiisoft/fontawesome/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/yiisoft/fontawesome/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yiisoft/fontawesome/?branch=master)
-[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fyiisoft%2Ffontawesome%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/yiisoft/fontawesome/master)
-[![static analysis](https://github.com/yiisoft/fontawesome/workflows/static%20analysis/badge.svg)](https://github.com/yiisoft/fontawesome/actions?query=workflow%3A%22static+analysis%22)
-[![type-coverage](https://shepherd.dev/github/yiisoft/fontawesome/coverage.svg)](https://shepherd.dev/github/yiisoft/fontawesome)
-
+[![static analysis](https://github.com/yii-extension/fontawesome/workflows/static%20analysis/badge.svg)](https://github.com/yii-extension/fontawesome/actions?query=workflow%3A%22static+analysis%22)
 
 ### Requirements:
 
