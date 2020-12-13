@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/yii-extension" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="80px">
+        <img src="https://lh3.googleusercontent.com/ehSTPnXqrkk0M3U-UPCjC0fty9K6lgykK2WOUA2nUHp8gIkRjeTN8z8SABlkvcvR-9PIrboxIvPGujPgWebLQeHHgX7yLUoxFSduiZrTog6WoZLiAvqcTR1QTPVRmns2tYjACpp7EQ=w2400" height="80px">
     </a>
     <a href="https://fontawesome.com/start" target="_blank" rel="external">
         <img src="docs/images/logo-fontawesome.jpg" height="80px">
@@ -9,21 +9,14 @@
     <br>
 </p>
 
-[![Latest Stable Version](https://poser.pugx.org/yii-extension/fontawesome/v/stable.png)](https://packagist.org/packages/yii-extension/fontawesome)
 [![Total Downloads](https://poser.pugx.org/yii-extension/fontawesome/downloads.png)](https://packagist.org/packages/yii-extension/fontawesome)
 [![build](https://github.com/yii-extension/fontawesome/workflows/build/badge.svg)](https://github.com/yii-extension/fontawesome/actions)
 [![static analysis](https://github.com/yii-extension/fontawesome/workflows/static%20analysis/badge.svg)](https://github.com/yii-extension/fontawesome/actions?query=workflow%3A%22static+analysis%22)
 
-### Requirements:
-
-The minimum requirement by this project template that your Web server supports PHP 7.4.0.
-
 
 ### Installation:
 
-The package could be installed via composer:
-
-```php
+```shell
 composer require yii-extension/fontawesome
 ```
 
@@ -82,8 +75,26 @@ $this->setJsFiles($assetManager->getJsFiles());
 
 ```
 
-### Run test phpunit:
+### Unit testing
 
-~~~
-vendor/bin/phpunit
-~~~
+The package is tested with [PHPUnit](https://phpunit.de/). To run tests:
+
+```shell
+./vendor/bin/phpunit
+```
+
+### Mutation testing
+
+The package tests are checked with [Infection](https://infection.github.io/) mutation framework. To run it:
+
+```shell
+./vendor/bin/infection
+```
+
+### Static analysis
+
+The code is statically analyzed with [Psalm](https://psalm.dev/). To run static analysis:
+
+```shell
+./vendor/bin/psalm
+```
