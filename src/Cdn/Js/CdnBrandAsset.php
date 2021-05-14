@@ -11,10 +11,10 @@ final class CdnBrandAsset extends AssetBundle
     public bool $cdn = true;
 
     public array $js = [
-        'https://use.fontawesome.com/releases/v5.15.1/js/brands.js'
+        'https://use.fontawesome.com/releases/v5.15.3/js/brands.js',
     ];
 
     public array $depends = [
-        CdnFontAwesomeAsset::class
+        CdnFontAwesomeAsset::class,
     ];
 }

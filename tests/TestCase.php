@@ -9,29 +9,34 @@ use PHPUnit\Framework\TestCase as BaseTestCase;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
+use ReflectionClass;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Assets\AssetConverter;
 use Yiisoft\Assets\AssetConverterInterface;
+use Yiisoft\Assets\AssetLoader;
+use Yiisoft\Assets\AssetLoaderInterface;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Assets\AssetPublisher;
 use Yiisoft\Assets\AssetPublisherInterface;
 use Yiisoft\Di\Container;
-use Yiisoft\Factory\Definitions\Reference;
+use Yiisoft\Factory\Definition\Reference;
 use Yiisoft\Files\FileHelper;
 
 abstract class TestCase extends BaseTestCase
 {
     private ContainerInterface $container;
-    protected AssetManager $assetManager;
     protected Aliases $aliases;
+    protected AssetManager $assetManager;
+    protected AssetPublisherInterface $assetPublisher;
 
     protected function setUp(): void
     {
         parent::setUp();
 
         $this->container = new Container($this->config());
-        $this->assetManager = $this->container->get(AssetManager::class);
         $this->aliases = $this->container->get(Aliases::class);
+        $this->assetManager = $this->container->get(AssetManager::class);
+        $this->assetPublisher = $this->container->get(AssetPublisherInterface::class);
     }
 
     protected function tearDown(): void
@@ -39,6 +44,25 @@ abstract class TestCase extends BaseTestCase
         parent::tearDown();
 
         $this->removeAssets('@assets');
+
+        unset($this->aliases, $this->assetManager, $this->assetPublisher);
+    }
+
+    /**
+     * Returns the registered asset bundles.
+     *
+     * @param AssetManager $manager
+     *
+     * @return array The registered asset bundles {@see AssetManager::$registeredBundles}.
+     */
+    protected function getRegisteredBundles(AssetManager $manager): array
+    {
+        $reflection = new ReflectionClass($manager);
+        $property = $reflection->getProperty('registeredBundles');
+        $property->setAccessible(true);
+        $registeredBundles = $property->getValue($manager);
+        $property->setAccessible(false);
+        return $registeredBundles;
     }
 
     protected function removeAssets(string $basePath): void
@@ -83,10 +107,12 @@ abstract class TestCase extends BaseTestCase
 
             AssetPublisherInterface::class => AssetPublisher::class,
 
+            AssetLoaderInterface::class => AssetLoader::class,
+
             AssetManager::class => [
-                '__class' => AssetManager::class,
-                'setConverter()' => [Reference::to(AssetConverterInterface::class)],
-                'setPublisher()' => [Reference::to(AssetPublisherInterface::class)],
+                'class' => AssetManager::class,
+                'withConverter()' => [Reference::to(AssetConverterInterface::class)],
+                'withPublisher()' => [Reference::to(AssetPublisherInterface::class)],
 
             ]
         ];

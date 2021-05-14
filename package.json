@@ -1,7 +1,0 @@
-{
-    "name": "font-awesome-free",
-    "license": "BSD-3-Clause",
-    "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.13.0"
-    }
-}

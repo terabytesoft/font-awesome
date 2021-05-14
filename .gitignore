@@ -56,3 +56,6 @@ c3.php
 
 #public
 /public/assets
+
+#node_modules
+/node_modules

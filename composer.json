@@ -12,17 +12,17 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.4|^8.0",
-        "npm-asset/fortawesome--fontawesome-free": "^5.15.1",
-        "oomphinc/composer-installers-extender": "^2.0.0",
-        "yiisoft/assets": "@dev"
+        "fortawesome/font-awesome": "^5.15.3",
+        "mnsami/composer-custom-directory-installer": "*",
+        "yiisoft/assets": "^1.0@dev"
     },
     "require-dev": {
         "psr/log": "^1.1",
-        "phpunit/phpunit": "^9.4",
-        "vimeo/psalm": "^4.2",
-        "yiisoft/aliases": "^1.1",
-        "yiisoft/di": "@dev",
-        "yiisoft/files": "@dev"
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^4.4",
+        "yiisoft/aliases": "^2.0.0",
+        "yiisoft/di": "^3.0@dev",
+        "yiisoft/files": "^1.0.0"
     },
     "autoload": {
         "psr-4": {"Yii\\Extension\\Fontawesome\\": "src"}
@@ -34,22 +34,11 @@
         "branch-alias": {
             "dev-master": "1.0.0-dev"
         },
-        "installer-types": [
-            "npm-asset"
-        ],
         "installer-paths": {
-            "./node_modules/{$name}": [
-                "type:npm-asset"
-            ]
+            "./node_modules/{$vendor}/{$name}": ["fortawesome/font-awesome"]
         }
     },
     "config": {
         "sort-packages": true
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ]
+    }
 }

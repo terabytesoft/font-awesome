@@ -11,6 +11,6 @@ final class CdnFontAwesomeAsset extends AssetBundle
     public bool $cdn = true;
 
     public array $css = [
-        'https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css'
+        'https://use.fontawesome.com/releases/v5.15.3/css/fontawesome.css',
     ];
 }

@@ -103,32 +103,30 @@ final class NpmAssetTest extends TestCase
      */
     public function testCdnAssetRegister(string $type, string $cdnBundle, ?string $cdnDepend = null): void
     {
-        $publisher = $this->assetManager->getPublisher();
-
         $bundle = new $cdnBundle();
 
         if ($cdnDepend !== null) {
             $depend = new $cdnDepend();
         }
 
-        $this->assertEmpty($this->assetManager->getAssetBundles());
+        $this->assertEmpty($this->getRegisteredBundles($this->assetManager));
 
         $this->assetManager->register([$cdnBundle]);
 
         if ($cdnDepend !== null && $type === 'Css') {
-            $dependUrl = $publisher->getPublishedUrl($depend->sourcePath) . '/' . $depend->css[0];
-            $this->assertEquals($dependUrl, $this->assetManager->getCssFiles()[$dependUrl]['url']);
+            $dependUrl = $this->assetPublisher->getPublishedUrl($depend->sourcePath) . '/' . $depend->css[0];
+            $this->assertEquals($dependUrl, $this->assetManager->getCssFiles()[$dependUrl][0]);
         } elseif ($type === 'Css') {
-            $bundleUrl = $publisher->getPublishedUrl($bundle->sourcePath) . '/' . $bundle->css[0];
-            $this->assertEquals($bundleUrl, $this->assetManager->getCssFiles()[$bundleUrl]['url']);
+            $bundleUrl = $this->assetPublisher->getPublishedUrl($bundle->sourcePath) . '/' . $bundle->css[0];
+            $this->assertEquals($bundleUrl, $this->assetManager->getCssFiles()[$bundleUrl][0]);
         }
 
         if ($cdnDepend !== null && $type === 'Js') {
-            $dependUrl = $publisher->getPublishedUrl($depend->sourcePath) . '/' . $depend->js[0];
-            $this->assertEquals($dependUrl, $this->assetManager->getJsFiles()[$dependUrl]['url']);
+            $dependUrl = $this->assetPublisher->getPublishedUrl($depend->sourcePath) . '/' . $depend->js[0];
+            $this->assertEquals($dependUrl, $this->assetManager->getJsFiles()[$dependUrl][0]);
         } elseif ($type === 'Js') {
-            $bundleUrl = $publisher->getPublishedUrl($bundle->sourcePath) . '/' . $bundle->js[0];
-            $this->assertEquals($bundleUrl, $this->assetManager->getJsFiles()[$bundleUrl]['url']);
+            $bundleUrl = $this->assetPublisher->getPublishedUrl($bundle->sourcePath) . '/' . $bundle->js[0];
+            $this->assertEquals($bundleUrl, $this->assetManager->getJsFiles()[$bundleUrl][0]);
         }
 
         $this->removeAssets('@assets');
