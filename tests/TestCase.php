@@ -96,7 +96,7 @@ abstract class TestCase extends BaseTestCase
                     [
                         '@assetsUrl' => '/assets',
                         '@assets' => dirname(__DIR__) . '/tests/data/assets',
-                        '@npm' => dirname(__DIR__) . '/node_modules'
+                        '@vendor' => dirname(__DIR__) . '/vendor'
                     ]
                 ]
             ],

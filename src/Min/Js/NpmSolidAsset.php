@@ -11,7 +11,7 @@ final class NpmSolidAsset extends AssetBundle
 {
     public ?string $basePath = '@assets';
     public ?string $baseUrl = '@assetsUrl';
-    public ?string $sourcePath = '@npm/fortawesome/font-awesome';
+    public ?string $sourcePath = '@vendor/fortawesome/font-awesome';
 
     public array $js = [
         'js/solid.min.js',

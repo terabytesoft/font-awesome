@@ -13,7 +13,6 @@
     "require": {
         "php": "^7.4|^8.0",
         "fortawesome/font-awesome": "^5.15.3",
-        "mnsami/composer-custom-directory-installer": "*",
         "yiisoft/assets": "^1.0@dev"
     },
     "require-dev": {
@@ -33,9 +32,6 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.0-dev"
-        },
-        "installer-paths": {
-            "./node_modules/{$vendor}/{$name}": ["fortawesome/font-awesome"]
         }
     },
     "config": {
